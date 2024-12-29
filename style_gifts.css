@@ -1,0 +1,635 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.main_width {
+    max-width: 1440px;
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.header {
+    width: 100%;
+    height: 64px;
+    box-sizing: border-box;
+
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+
+    line-height: 15.6px;
+    letter-spacing: 0.6;
+
+    color: #181C29;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0  5.6% 0 5.6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 20;
+}
+
+.logo_container {
+    width: 141px;
+    height: 40px;
+
+    gap: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_container a {
+    text-decoration: none;
+
+    color: #181C29;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_container:hover {
+    cursor: pointer;
+}
+
+.header_list {
+    width: 77%;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    display: none;
+}
+
+.header_list ul, a {
+    text-decoration: none;
+    list-style: none;
+
+    display: flex;
+
+    gap: 8px;
+
+    padding: 0;
+    margin: 0;
+}
+
+.list_button {
+    padding: 12px 20px;
+
+    color: #181C29;
+
+    background-color: transparent;
+
+    transition: color 0.5s ease, background-color 0.5s ease;
+
+    border-radius: 12px;
+}
+
+.list_button:hover {
+    background-color: rgba(250, 70, 70, 0.1);
+
+    color: #ff4646;
+}
+
+.list_button a {
+    color: inherit;
+}
+
+.list_button:hover a {
+    color: #ff4646
+}
+
+.menu_section {
+    display: none;
+}
+
+.gifts_section {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+
+    background-color: #ff4646;
+    background-image: url('./images/bg-garland.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    border-radius: 20px;
+
+    padding: 60px 0 60px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gifts_container {
+    width: 1276px;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.title_and_butons_container {
+    width: 1276px;
+    height: 204px;
+    box-sizing: border-box;
+
+    color: #fff;
+
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 0 0 20px 0;
+}
+
+.title_and_butons_container h1 {
+    font-size: 32px;
+    font-weight: 600;
+    
+    line-height: 48px;
+    letter-spacing: 5.76px;
+
+    padding: 0 0 20px 0;
+    margin: 0;
+}
+
+.buttons_container {
+    width: 474px;
+    height: 40px;
+    box-sizing: border-box;
+    
+    padding: 0;
+    margin: 0;
+    gap: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    font-size: 12px;
+    font-weight: 600;
+    
+    line-height: 15.6px;
+    letter-spacing: 0.6px;
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+
+    cursor: pointer;
+}
+
+.gifts {
+    max-width: 1276px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+
+    gap: 12px;
+
+    grid-template-columns: repeat(4, 310px);
+    grid-template-rows: repeat(3, 342px);
+}
+
+.gifts_item {
+    width: 310px;
+    height: 342px;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #ECF3F8;
+
+    color: #181C29;
+
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    transition: 0.3s ease;
+}
+
+.gifts_item:hover {
+    color: #ff4646;
+}
+
+.gifts_item img {
+    width: 310px;
+    height: 230px;
+}
+
+.gift_description {
+    width: 310px;
+    height: 112px;
+    box-sizing: border-box;
+
+    padding: 20px 0 0 20px;
+
+    border-radius: 20px;
+
+    background-color: #fff;
+}
+
+.gift_description h2 {
+    font-size: 12px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    text-transform: uppercase;
+
+    line-height: 15.6px;
+    letter-spacing: 0.6px;
+    
+    margin: 0;
+    padding: 0 0 8px 0;
+}
+
+.for_work {
+    color: #4361FF;
+}
+
+.for_health {
+    color: #06A44F;
+}
+
+.for_harmony {
+    color: #FF43F7;
+}
+
+.gift_description h3 {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    
+    line-height: 24.32px;
+    letter-spacing: 1.28px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+
+    padding: 60px 0 60px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_container {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    color: #181c29;
+
+    gap: 60px;
+}
+
+.footer_boxes {
+    width: 1276px;
+    height: 204px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box {
+    width: 417.33px;
+    height: 204px;
+    box-sizing: border-box;
+
+    background-color: #ECF3F8;
+
+    border-radius: 20px;
+
+    text-transform: uppercase;
+
+    font-family: 'Montserrat';
+    color: #181C29;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 0;
+    margin: 0;
+    gap: 12px;
+
+    transition: 0.3s;
+}
+
+.box:hover {
+    color: #ff4646;
+
+    cursor: pointer;
+}
+
+.box img {
+    width: 80px;
+    height: 80px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.box h5 {
+    font-size: 24px;
+    font-weight: 600;
+
+    line-height: 36.48px;
+    letter-spacing: 3.84px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.box h6 {
+    font-size: 16px;
+    font-weight: 600;
+
+    line-height: 24.32px;
+    letter-spacing: 1.28px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.footer_end_container {
+    width: 1276px;
+    height: 112px;
+
+    gap: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icons_container {
+    width: 196px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon_box {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s ease;
+}
+
+.icon_box:hover {
+    cursor: pointer;
+}
+
+.icon_box svg path {
+    stroke:#181C29;
+}
+
+.icon_box:hover svg path{
+    stroke: #ff4646;
+    cursor: pointer;
+}
+
+.copyright {
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 23.68px;
+}
+
+.footer_caption {
+    font-size: 24px;
+    font-family: 'Allura';
+    font-weight: 400;
+
+    line-height: 24px;
+    letter-spacing: 1.2px;
+}
+
+@media (max-width: 1290px) {
+    .gifts {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto;
+        justify-content: center;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer_container {
+        width: 98%;
+        height: auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer_boxes {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 12px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 969px) {
+    .gifts {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header_list ul {
+        display: none;
+    }
+
+    .menu {
+        width: 40px;
+        height: 40px;
+
+        display: block;
+
+        padding: 10px;
+
+        position: relative;
+    }
+
+    .menu_line_one,
+    .menu_line_two {
+        content: "";
+
+        width: 20px;
+        border: 1px solid #181C29;
+
+        position: absolute;
+        left: 5px;
+        
+        transition: 0.4s ease;
+    }
+
+    .menu_line_one {
+        top: 25px;
+    }
+
+    .menu_line_two {
+        bottom: 25px;
+    }
+
+    .menu.active .menu_line_one {
+        transform: translateY(4px) rotate(45deg);
+    }
+
+    .menu.active .menu_line_two {
+        transform: translateY(-4px) rotate(-45deg);
+    }
+
+    .menu_section {
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        z-index: 10;
+
+        position: fixed;
+        right: -100%;
+
+        background-color: #fff;
+
+        transition: 0.4s ease;
+    }
+
+    .menu_section.active {
+        right: 0;
+    }
+
+    .menu_paragraph a {
+        text-align: center;
+        color: #181C29;
+    
+        font-size: 24px;
+        font-family: 'Montserrat';
+        font-weight: 600;
+        text-transform: uppercase;
+    
+        line-height: 36.48px;
+        letter-spacing: 3.84px;
+    
+        padding: 12px 20px 12px 20px;
+    }
+}
+
+@media (max-width: 649px) {
+    .gifts {
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: auto;
+        justify-content: center;
+    }
+
+    .gifts_container {
+        width: 95%;
+        height: auto;
+    }
+
+    .title_and_butons_container {
+        width: 100%;
+        height: 7%;
+
+        text-align: center;
+    }
+
+    .buttons_container {
+        gap: 0;
+    }
+
+    .button {
+        padding: 12px 8px;
+    }
+}
