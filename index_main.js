@@ -57,9 +57,9 @@ menuParagraph.forEach (link => {
 //Slider
 
 const width = document.getElementById('main_width');
-const sliderContainerWidth = document.getElementById('slider_container_width').clientWidth;
+const sliderContainer = document.getElementById('slider_container_width').clientWidth;
 const slider = document.getElementById('slider');
-const sliderWidth = slider.clientWidth;
+const sliderWidth = document.getElementById('slider').clientWidth;
 const right = document.getElementById('right_arrow_button');
 const left = document.getElementById('left_arrow_button');
 const maxWidthClicks = 3;
@@ -68,62 +68,68 @@ const atBoot_positionSliderinAxes_X = slider.getBoundingClientRect().left;
 const fixedPosition = atBoot_positionSliderinAxes_X;
 const nowWidth = width.clientWidth;
 
+let clicks = 0;
 let distanceMovie = 0;
-let resultMovie = 0;
-let position = atBoot_positionSliderinAxes_X;
-let a = 0;
-let workButton = 0;
+let movie = 0;
+let minClicks;
+let maxClicks;
 
-console.log(position);
-
-if (nowWidth >= 769) {
-    distanceMovie = (sliderWidth - sliderContainerWidth) / maxWidthClicks;
-    workButton = distanceMovie * maxWidthClicks;
+if (width.clientWidth >= 769) {
+    distanceMovie = (slider.clientWidth - sliderContainer) / maxWidthClicks;
+    maxClicks = 3;
+} else if (width.clientWidth <= 768) {
+    distanceMovie = (slider.clientWidth - sliderContainer) / minWidthClicks;
+    minClicks = 6;
 } else {
-    distanceMovie = (sliderWidth - sliderContainerWidth) / minWidthClicks;
-    workButton = distanceMovie * minWidthClicks;
+    console.log("Error: resolution definition")
 }
 
-checkButtons();
+chekButtons();
 
 right.addEventListener('click', () => {
-    resultMovie -= distanceMovie;
-    slider.style.transform = `translateX(${resultMovie}px)`;
-    position -= distanceMovie;
-    console.log(position);
-    checkButtons();
+    movie -= distanceMovie;
+    slider.style.transform = `translateX(${movie}px)`;
+    
+    if (maxClicks != undefined) {
+        maxClicks -= 1;
+    } else {
+        minClicks -= 1;
+    }
+
+    chekButtons();
 });
 
 left.addEventListener('click', () => {
-    resultMovie += distanceMovie;
-    slider.style.transform = `translateX(${resultMovie}px)`;
-    position += distanceMovie;
-    console.log(position);
-    checkButtons();
+    movie += distanceMovie;
+    slider.style.transform = `translateX(${movie}px)`;
+    
+    if (maxClicks != undefined) {
+        maxClicks += 1;
+    } else {
+        minClicks += 1;
+    }
+
+    chekButtons();
 });
 
-function checkButtons() {
+function chekButtons() {
     function checkLeftButton() {
-        if (position == fixedPosition) {
+        if (maxClicks == 3 || minClicks == 6) {
             left.disabled = true;
             left.classList.toggle('disabled');
-        } else if (position < fixedPosition) {
+        } else {
             left.disabled = false;
             left.classList.remove('disabled');
-        } else {
-            console.log('Не работает твой код')
         }
     }
 
     function checkRightButton() {
-        if (position == (fixedPosition - workButton)) {
+        if (minClicks == 0 || maxClicks == 0) {
             right.disabled = true;
             right.classList.toggle('disabled');
-        } else if (position > (fixedPosition - workButton)) {
+        } else {
             right.disabled = false;
             right.classList.remove('disabled');
-        } else {
-            (console.log('Не работает твой код'));
         }
     }
 
