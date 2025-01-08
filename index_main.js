@@ -1,7 +1,7 @@
 // Clock
 
 function updateTime() {
-    const new_year = new Date('2026-02-10T00:00:00');
+    const new_year = new Date('2025-02-10T00:00:00');
     const realTime = new Date();
 
     const m_seconds = 1000;
