@@ -1,7 +1,7 @@
 // Clock
 
 function updateTime() {
-    const new_year = new Date('2026-01-01T00:00:00');
+    const new_year = new Date('2026-02-10T00:00:00');
     const realTime = new Date();
 
     const m_seconds = 1000;
@@ -135,4 +135,53 @@ function chekButtons() {
 
     checkLeftButton();
     checkRightButton();
+}
+
+//Modal Window
+const modalWindow = document.getElementById('modal_window');
+const overlay = document.getElementById('overlay');
+//Gifts
+const workGift = document.getElementById('container_for_work');
+const healthGift = document.getElementById('container_for_health');
+const harmonyGift = document.getElementById('container_for_harmony');
+// Images
+const workImage = document.getElementById('image_for_work');
+const healthImage = document.getElementById('image_for_health');
+const harmonyImage = document.getElementById('image_for_harmony');
+// Lists
+const workList = document.getElementById('work_list');
+const healthList = document.getElementById('health_list');
+const harmonyList = document.getElementById('harmony_list');
+// Text
+const windowName = document.getElementById('window_name');
+const windowTitle = document.getElementById('window_title');
+const windowText = document.getElementById('window_text');
+// Add event
+const giftsContainer = document.querySelectorAll('.gifts_container');
+giftsContainer.forEach(gift => {
+    gift.addEventListener('click', openModalWindow);
+});
+
+function openModalWindow(event) {
+    const targetId = event.currentTarget.id;
+
+    if (targetId === workGift.id) {
+        overlay.classList.toggle('visible');
+        document.body.classList.toggle('no-scroll');
+        modalWindow.classList.toggle('visible');
+        workImage.style.display = 'block';
+        windowName.innerText = 'for work';
+        windowName.style.color = '#4361FF';
+        windowTitle.innerText = 'Console.log Guru';
+        windowText.innerText = 'Uses console.log like a crystal ball to find any issue.';
+        workList.style.display = 'block';
+    } else if (targetId === healthGift.id) {
+        overlay.classList.toggle('visible');
+        modalWindow.classList.toggle('visible');
+    } else if (targetId === harmonyGift.id) {
+        overlay.classList.toggle('visible');
+        modalWindow.classList.toggle('visible');
+    } else {
+        console.error(`Error: activeModalWindow don't work`)
+    }
 }

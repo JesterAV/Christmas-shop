@@ -8,6 +8,7 @@
     <link rel="icon" href="./favikon.png" type="image/x-icon">
 </head>
 <body>
+
     <div class="main_width" id="main_width">
 
         <header class="header">
@@ -169,7 +170,8 @@
                         </p>
                     </div>
                     <div class="all_gifts_container">
-                        <div class="gifts_container">
+
+                        <div class="gifts_container" id="container_for_work">
                             <div class="image_gift">
                                 <img src="./images/gift-for-work.png" alt="gift-for-harmony">
                                 <div class="description">
@@ -178,7 +180,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="gifts_container">
+
+                        <div class="gifts_container" id="container_for_health">
                             <div class="image_gift">
                                 <img src="./images/gift-for-health.png" alt="gift-for-harmony">
                                 <div class="description">
@@ -187,7 +190,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="gifts_container">
+
+                        <div class="gifts_container" id="container_for_work">
                             <div class="image_gift">
                                 <img src="./images/gift-for-work.png" alt="gift-for-work.png">
                                 <div class="description">
@@ -196,7 +200,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="gifts_container">
+
+                        <div class="gifts_container" id="container_for_harmony">
                             <div class="image_gift">
                                 <img src="./images/gift-for-harmony.png" alt="gift-for-harmony">
                                 <div class="description">
@@ -205,6 +210,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -336,7 +342,219 @@
             </div>
         </footer>
     </div>
+    
+    <div class="overlay" id="overlay"></div>
+    <div class="modal_window" id='modal_window'>
+        <div class="image_container">
+            <div class="cross_button">
+                <div class="line_one"></div>
+                <div class="line_two"></div>
+            </div>
+            <img src="./images/gift-for-work.png" alt="for work" id="image_for_work" class="image_for_work">
+            <img src="./images/gift-for-health.png" alt="for health" id="image_for_health" class="image_for_health">
+            <img src="./images/gift-for-harmony.png" alt="for harmony" id="image_for_harmony" class="image_for_harmony">
+        </div>
+        <div class="text_and_description_container">
+            <div class="text_container">
+                <div class="window_name" id="window_name"></div>
+                <div class="window_title" id="window_title"></div>
+                <div class="window_text" id="window_text"></div>
+            </div>
+            <div class="description_container">
+                <div class="list_name">
+                    Adds superpowers to:
+                </div>
+                <div class="description_list_for_work" id="work_list">
+                    <div class="description_chapter">
+                        <div class="description_name">
+                            Live
+                        </div>
+                        <div class="description_number">
+                            +500
+                        </div>
+                        <div class="snowflakes">
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                        </div>
+                    </div>
+                    <div class="description_chapter">
+                        <div class="description_name">
+                            create
+                        </div>
+                        <div class="description_number">
+                            +500
+                        </div>
+                        <div class="snowflakes">
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                        </div>
+                    </div>
+                    <div class="description_chapter">
+                        <div class="description_name">
+                            love
+                        </div>
+                        <div class="description_number">
+                            +200
+                        </div>
+                        <div class="snowflakes">
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake opacity"></div>
+                            <div class="snowflake opacity"></div>
+                            <div class="snowflake opacity"></div>
+                        </div>
+                    </div>
+                    <div class="description_chapter">
+                        <div class="description_name">
+                            dream
+                        </div>
+                        <div class="description_number">
+                            +400
+                        </div>
+                        <div class="snowflakes">
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake opacity" ></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="description_list_for_health" id="health_list">
+                    <div class="description_chapter">
+                        <div class="description_name">
+                            Live
+                        </div>
+                        <div class="description_number">
+                            +400
+                        </div>
+                        <div class="snowflakes">
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake opacity"></div>
+                        </div>
+                    </div>
+                    <div class="description_chapter">
+                        <div class="description_name">
+                            create
+                        </div>
+                        <div class="description_number">
+                            +300
+                        </div>
+                        <div class="snowflakes">
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake opacity"></div>
+                            <div class="snowflake opacity"></div>
+                        </div>
+                    </div>
+                    <div class="description_chapter">
+                        <div class="description_name">
+                            love
+                        </div>
+                        <div class="description_number">
+                            +500
+                        </div>
+                        <div class="snowflakes">
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                        </div>
+                    </div>
+                    <div class="description_chapter">
+                        <div class="description_name">
+                            dream
+                        </div>
+                        <div class="description_number">
+                            +400
+                        </div>
+                        <div class="snowflakes">
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake opacity"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="description_list_for_harmony" id="harmony_list">
+                    <div class="description_chapter">
+                        <div class="description_name">
+                            Live
+                        </div>
+                        <div class="description_number">
+                            +300
+                        </div>
+                        <div class="snowflakes">
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake opacity"></div>
+                            <div class="snowflake opacity"></div>
+                        </div>
+                    </div>
+                    <div class="description_chapter">
+                        <div class="description_name">
+                            create
+                        </div>
+                        <div class="description_number">
+                            +200
+                        </div>
+                        <div class="snowflakes">
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake opacity"></div>
+                            <div class="snowflake opacity"></div>
+                            <div class="snowflake opacity"></div>
+                        </div>
+                    </div>
+                    <div class="description_chapter">
+                        <div class="description_name">
+                            love
+                        </div>
+                        <div class="description_number">
+                            +500
+                        </div>
+                        <div class="snowflakes">
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                        </div>
+                    </div>
+                    <div class="description_chapter">
+                        <div class="description_name">
+                            dream
+                        </div>
+                        <div class="description_number">
+                            +500
+                        </div>
+                        <div class="snowflakes">
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake"></div>
+                            <div class="snowflake" ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="./index_main.js"></script>
+
 </body>
 </html>
