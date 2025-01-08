@@ -878,4 +878,8 @@ body.no-scroll {
     .button {
         padding: 12px 8px;
     }
+
+    .modal_window {
+        width: 91%;
+    }
 }
