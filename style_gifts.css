@@ -14,6 +14,10 @@ body {
     padding: 0;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 .main_width {
     max-width: 1440px;
     width: 100%;
@@ -260,6 +264,7 @@ body {
 
 .gifts_item:hover {
     color: #ff4646;
+    cursor: pointer;
 }
 
 .gifts_item img {
@@ -473,6 +478,247 @@ body {
 
     line-height: 24px;
     letter-spacing: 1.2px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(24, 28, 41, 0.9);
+
+    visibility: hidden;
+
+    transition: opacity 0.5s ease;
+
+    z-index: 90;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay.visible {
+    background-color: rgba(24, 28, 41, 0.8);
+    visibility: visible;
+    transition: 0.5s ease;
+}
+
+.modal_window {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    visibility: hidden;
+    z-index: 100;
+
+    background-color: #fff;
+    position: absolute;
+}
+
+.modal_window.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.image_container {
+    width: 100%;
+    height: 230px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ECF3F8 ;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_container img {
+    width: 100%;
+    position: relative;
+}
+
+.cross_button {
+    width: 40px;
+    height: 40px;
+
+    padding: 10px;
+    top: 3px;
+    right: 3px;
+    position: absolute;
+
+    margin: 0;
+
+    z-index: 102;
+}
+
+.line_one,
+.line_two {
+    content: "";
+    
+    width: 20px;
+    border: 1px solid #181C29;
+
+    position: absolute;
+}
+
+.line_one {
+    top: 25px;
+    transform: translateY(4px) rotate(45deg);
+}
+
+.line_two {
+    bottom: 25px;
+    transform: translateY(-4px) rotate(-45deg);
+}
+
+.image_for_work {
+    display: none;
+}
+
+.image_for_health {
+    display: none;
+}
+
+.image_for_harmony {
+    display: none;
+}
+
+.text_and_description_container {
+    width: 100%;
+    height: auto;
+
+    padding: 20px 0;
+    gap: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column;
+}
+
+.text_container {
+    width: 90%;
+    height: 104px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    color: #181C29;
+}
+
+.window_name {
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    line-height: 15.6px;
+    font-weight: 600;
+}
+
+.window_title {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    line-height: 24.32px;
+}
+
+.window_text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.68px;
+    font-family: 'Montserrat';
+}
+
+.description_container {
+    max-width: 360px;
+    width: 90%;
+    height: auto;
+    font-family: 'Montserrat';
+    text-transform: capitalize;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    color: #181C29;
+}
+
+.list_name {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.description_list_for_work {
+    display: none;
+}
+
+.description_list_for_health {
+    display: none;
+}
+
+.description_list_for_harmony {
+    display: none;
+}
+
+.description_chapter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description_name {
+    width: 51.11%;
+    font-weight: 400;
+    line-height: 23.68px;
+}
+
+.description_number {
+    width: 11.11%;
+}
+
+.snowflakes {
+    width: 31.11%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.snowflake {
+    width: 13.78px;
+    height: 16px;
+
+    background-image: url('./images/Vector.png');
+    background-size: cover;
+}
+
+.snowflake.opacity {
+    opacity: 0.3;
 }
 
 @media (max-width: 1290px) {

@@ -15,6 +15,10 @@ body {
     align-items: center;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 .main_width {
     max-width: 1440px;
     width: 100%;
@@ -1063,8 +1067,7 @@ body {
     top: 0;
     left: 0;
 
-    background-color: #181C29;
-    opacity: 0;
+    background-color: rgba(24, 28, 41, 1);
 
     visibility: hidden;
 
@@ -1078,8 +1081,9 @@ body {
 }
 
 .overlay.visible {
-    opacity: 0.8;
+    background-color: rgba(24, 28, 41, 0.8);
     visibility: visible;
+    transition: opacity 0.5s ease;
 }
 
 .modal_window {
@@ -1119,6 +1123,10 @@ body {
     background-color: #ECF3F8 ;
 
     position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image_container img {
@@ -1131,9 +1139,13 @@ body {
     height: 40px;
 
     padding: 10px;
-    top: 12px;
-    right: 12px;
+    top: 3px;
+    right: 3px;
     position: absolute;
+
+    margin: 0;
+
+    z-index: 102;
 }
 
 .line_one,
@@ -1142,8 +1154,6 @@ body {
     
     width: 20px;
     border: 1px solid #181C29;
-
-    left: 5px;
 
     position: absolute;
 }
@@ -1184,12 +1194,13 @@ body {
 }
 
 .text_container {
-    width: 360px;
+    width: 90%;
     height: 104px;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    flex-wrap: wrap;
 
     gap: 8px;
 
@@ -1221,7 +1232,7 @@ body {
 
 .description_container {
     max-width: 360px;
-    width: 100%;
+    width: 90%;
     height: auto;
     font-family: 'Montserrat';
     text-transform: capitalize;
@@ -1335,6 +1346,10 @@ body {
 
     .time_section_container {
         width: 100%;
+    }
+
+    .modal_window {
+        width: 91%;
     }
 }
 
