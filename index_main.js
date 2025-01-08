@@ -179,17 +179,15 @@ function closeModalWindow() {
 
 function openModalWindow(event) {
     const targetId = event.currentTarget.id;
-    const title = targetId.querySelector('h3').innerText;
     overlay.classList.toggle('visible');
     document.body.classList.toggle('no-scroll');
-    console.log(title);
 
     if (targetId === workGift.id) {
         modalWindow.classList.toggle('visible');
         workImage.style.display = 'block';
         windowName.innerText = 'for work';
         windowName.style.color = '#4361FF';
-        windowTitle.innerText = title;
+        windowTitle.innerText = 'console.log.guru';
         windowText.innerText = 'Uses console.log like a crystal ball to find any issue.';
         workList.style.display = 'block';
     } else if (targetId === healthGift.id) {
